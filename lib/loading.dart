@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 //加载页
 class LoadingPage extends StatefulWidget{
+
   @override
   _LoadingState createState() => new _LoadingState();
 
@@ -23,7 +24,7 @@ class _LoadingState extends State<LoadingPage> {
       child: Stack(
         children: <Widget>[
           //加载页面居中背景
-          Image.network("images/laoding.png",fit: BoxFit.cover,)
+          Image.network("images/laoding.jpg",fit: BoxFit.cover,)
         ],
       ),
     );

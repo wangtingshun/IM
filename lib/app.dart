@@ -14,7 +14,7 @@ class AppState extends State<App>{
 
   var _currentIndex = 0;
   //聊天页面
-  Messagepage message;
+  MessagePage message;
   //好友页面
   Contacts contacts;
   //我的页面
@@ -25,7 +25,7 @@ class AppState extends State<App>{
     switch(_currentIndex){
       case 0:
         if (message == null){
-          message = new Messagepage();
+          message = new MessagePage();
         }
         return message;
       case 1:
@@ -46,7 +46,7 @@ class AppState extends State<App>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('偶尔'),
+        title: Text('西游记'),
         actions: <Widget>[
           GestureDetector(
             onTap: (){
@@ -96,8 +96,7 @@ class AppState extends State<App>{
           ),
             new BottomNavigationBarItem(
                 title: new Text('好友', style: TextStyle(
-                    color: _currentIndex == 1 ? Color(0xFF1296db) : Color(
-                        0xff999999)
+                    color: _currentIndex == 1 ? Color(0xFF1296db) : Color(0xff999999)
                 ),),
                 icon: _currentIndex == 1 ? Image.asset(
                   'images/contacts_list_pressed.png', width: 32, height: 28,)
@@ -105,8 +104,7 @@ class AppState extends State<App>{
                   'images/contacts_list_normal.png', width: 32, height: 28,)),
             new BottomNavigationBarItem(
                 title: new Text('我的', style: TextStyle(
-                    color: _currentIndex == 2 ? Color(0xFF1296db) : Color(
-                        0xff999999)),),
+                    color: _currentIndex == 2 ? Color(0xFF1296db) : Color(0xff999999)),),
                 icon: _currentIndex == 2 ? Image.asset('images/profile_pressed.png', width: 32, height: 28,)
                     : Image.asset('images/profile_normal.png', width: 32, height: 28,))
           ]
