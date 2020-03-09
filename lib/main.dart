@@ -3,6 +3,7 @@ import './app.dart';
 import './loading.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import './search.dart';
+import 'chat/message_chat.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -11,6 +12,7 @@ void main() => runApp(MaterialApp(
       theme: mDefaultTheme,
       routes: <String, WidgetBuilder>{
         "app": (BuildContext context) => new App(),
+        "/message": (BuildContext context) => new MessageChat(),
         "/friends": (_) => new WebviewScaffold(
               url: "https://flutter.io/",
               appBar: new AppBar(

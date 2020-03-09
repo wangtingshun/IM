@@ -45,8 +45,8 @@ class Personal extends StatelessWidget {
                     margin: const EdgeInsets.only(left: 12.0, right: 15.0),
                     child: Image.asset(
                       'images/code.png',
-                      width: 32.0,
-                      height: 32.0,
+                       width: 32.0,
+                       height: 32.0,
                     ),
                   )
                 ],
